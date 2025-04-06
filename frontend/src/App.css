@@ -1,0 +1,90 @@
+/* Masonry Grid Styles */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -1rem; /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 1rem; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Root container */
+#root {
+  max-width: 100%;
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  /* text-align: center; */
+}
+
+/* Logo Styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card and Docs Text */
+.card {
+  /* padding: 2em; */
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Button styles (for consistency with the green and gray buttons) */
+.button-green {
+  background-color: #00b140;
+  color: white;
+  padding: 0.75em 1.5em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-green:hover {
+  background-color: #009933;
+}
+
+.button-gray {
+  background-color: #f2f2f2;
+  color: black;
+  padding: 0.75em 1.5em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-gray:hover {
+  background-color: #dddddd;
+}
