@@ -22,6 +22,7 @@
 - **Frontend**: React.js
 - **Backend**: Node.js + Express
 - **Database**: MongoDB
+- **Chat**: Socket.io
 - **Machine Learning**: Python, Flask, Scikit-learn (for semantic feedback classification)
 
 ---
