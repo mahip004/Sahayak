@@ -63,7 +63,9 @@
 git clone https://github.com/your-username/sahayak.git
 cd sahayak
 
-####2. Install frontend & backend dependencies
+---
+
+### 2. Install frontend & backend dependencies
 # Frontend
 cd client
 npm install
@@ -72,12 +74,16 @@ npm install
 cd ../server
 npm install
 
-#### 3. Setup Flask ML API
+---
+
+### 3. Setup Flask ML API
 cd ../ml_api
 pip install -r requirements.txt
 python app.py
 
-#### 4. Start development servers
+---
+
+### 4. Start development servers
 # Terminal 1 - Flask API
 cd ml_api
 python app.py
