@@ -1,71 +1,45 @@
-# Sahayak 🤝
+# 🤝 Sahayak
 
-**Sahayak** is a full-stack MERN + Flask-based platform that bridges the gap between **volunteers** and **communities**. It enables seamless interaction, collaboration, and feedback through modern web technologies and machine learning.
+**Sahayak** is a MERN-based web platform that connects volunteers with communities in need. It includes real-time chat, smart feedback analysis using machine learning, and scheduling features — all designed to improve collaboration and support.
 
 ---
 
 ## 🌟 Features
 
-### 👥 User & Role Management
-- **Community Registration**: Communities can register, create profiles, and request volunteers.
-- **Volunteer Registration**: Volunteers can register, manage availability, and respond to community needs.
-
-### 🧠 Smart Feedback System
-- A **machine learning-powered feedback module** analyzes user input and classifies it as **Positive**, **Negative**, or **Neutral** using semantic sentiment analysis.
-- Communities and volunteers receive **performance labels** like _Good_, _Average_, or _Needs Improvement_ based on feedback.
-
-### 📅 Scheduling System
-- Volunteers can update and manage their **availability**.
-- Communities can schedule sessions and request volunteers based on availability.
-
-### 💬 Real-time Chat
-- Real-time chat system integrated on the **community page** for smooth interaction between volunteers and communities using `socket.io`.
-
-### 📝 Feedback Interface
-- Users can submit written feedback for communities and volunteers.
-- ML analysis provides both label and sentiment classification for every feedback instance.
+- 🔐 Community & Volunteer registration and login
+- 📆 Volunteer scheduling and management
+- 💬 Real-time chat between communities and volunteers
+- 📝 Feedback system for both volunteers and communities
+- 🧠 ML-based semantic analysis for feedback labeling (Excellent, Good, Bad, etc.)
+- 📊 Dashboard for users to view their interactions and feedback
+- 🔎 Community listing and interaction interface
+- ✅ Flask-powered ML API integration for feedback classification
 
 ---
 
-## 💻 Tech Stack
+## 🛠️ Tech Stack
 
-| Layer           | Technology Used                     |
-|----------------|--------------------------------------|
-| **Frontend**    | React.js, React Router, Tailwind CSS / CSS |
-| **Backend**     | Node.js, Express.js                 |
-| **Database**    | MongoDB (with Mongoose)             |
-| **ML Model API**| Flask (Python)                      |
-| **Real-Time**   | Socket.IO (for chat functionality)  |
-| **ML Techniques**| Semantic analysis with NLP models  |
-
----
-
-## 🔌 APIs & Integration
-
-- **Flask ML API**: Accepts textual feedback and returns sentiment + label (e.g., Positive-Good, Negative-Bad).
-- **Express REST APIs**: Handle user auth, community/volunteer registration, feedback, and scheduling.
-- **MongoDB Atlas**: Used for cloud-hosted NoSQL database with collections like `users`, `communities`, `volunteers`, `feedbacks`, and `schedules`.
+- **Frontend**: React.js
+- **Backend**: Node.js + Express
+- **Database**: MongoDB
+- **Machine Learning**: Python, Flask, Scikit-learn (for semantic feedback classification)
 
 ---
 
 ## 🚀 Getting Started
 
-### 🔧 Prerequisites
-- Node.js & npm
-- Python 3.8+
-- MongoDB (local or Atlas)
-- Flask & required Python dependencies (see below)
+### 1. Clone the repository
 
-### 📦 Installation
-
-#### 1. Clone the repository
 ```bash
 git clone https://github.com/your-username/sahayak.git
 cd sahayak
+```
 
 ---
 
 ### 2. Install frontend & backend dependencies
+
+```bash
 # Frontend
 cd client
 npm install
@@ -73,25 +47,77 @@ npm install
 # Backend
 cd ../server
 npm install
+```
 
 ---
 
 ### 3. Setup Flask ML API
+
+```bash
 cd ../ml_api
 pip install -r requirements.txt
 python app.py
+```
 
 ---
 
 ### 4. Start development servers
+
+```bash
 # Terminal 1 - Flask API
 cd ml_api
 python app.py
+```
 
+```bash
 # Terminal 2 - Express server
 cd server
 npm start
+```
 
+```bash
 # Terminal 3 - React frontend
 cd client
 npm start
+```
+
+---
+
+## 📂 Folder Structure
+
+```
+sahayak/
+│
+├── client/         # React Frontend
+├── server/         # Express Backend
+├── ml_api/         # Flask API with ML Model
+├── README.md
+└── ...
+```
+
+---
+
+## ✨ Future Scope
+
+- 🌙 Dark mode UI
+- 📍 Location-based volunteer search
+- 📈 Advanced analytics for communities and volunteers
+- 📦 Deploy on cloud (Heroku, Render, etc.)
+
+---
+
+## 🤖 ML Feedback Model
+
+The platform uses a **trained ML model** (e.g., Random Forest or SVM) to automatically classify feedback into categories like:
+
+- Excellent
+- Good
+- Average
+- Poor
+- Spam
+
+This helps communities and admins quickly assess the quality of services and interactions.
+
+---
+
+> Made with ❤️ by Shadow Coders
